@@ -30,7 +30,7 @@ Now, you're all set to unveil the secrets behind those perplexing assembly instr
 While striving for perfection, there might be some unnoticed errors in the code. Your feedback is invaluable in improving the plugin, so don't hesitate to report any issues you encounter.
 
 - The plugin has been tested on Arch Linux with IDA Pro 8.2; Windows support is theoretical.
-- 
+
 ## Automatic Updates
 
 Stay current with the ever-evolving world of assembly instructions! This plugin is designed to automatically check for updates every two weeks. Enjoy continuous improvement without lifting a finger!
