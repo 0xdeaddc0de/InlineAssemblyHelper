@@ -4,7 +4,7 @@ Ever found yourself scratching your head over the mysterious `__asm { VSCATTERPF
 
 This compact IDAPython plugin is designed to elevate your reverse engineering experience by enhancing the HexRays decompiler's output with insightful comments for inline assembly. Currently, it exclusively supports the x86 architecture.
 
-![Screenshot](./img/example.png)
+![Screenshot](./img/example1.png)
 
 > Gain a deeper understanding of x86 instructions with the help of this plugin. For comprehensive instruction details, refer to [Felix Cloutier's x86 Opcode and Instruction Reference](https://www.felixcloutier.com/x86/).
 
