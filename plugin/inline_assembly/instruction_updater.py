@@ -5,6 +5,7 @@ import requests
 from pathlib import Path
 from bs4 import BeautifulSoup
 from ida_kernwin import get_kernel_version
+from idaapi import get_user_idadir
 
 def retrieve_IDA_path():
 
@@ -17,7 +18,7 @@ def scrape_instructions(url="https://www.felixcloutier.com/x86/"):
     if os.path.exists(file_path):
         last_modified_time = os.path.getmtime(file_path)
         current_time = time.time()
-        two_weeks_ago = current_time - (14 * 24 * 60 * 60) 
+        two_weeks_ago = current_time - (7 * 4 * 24 * 60 * 60) 
 
         if last_modified_time > two_weeks_ago:
             print(f"[InlineAssembly] The file '{file_path}' was updated in the last two weeks. Skipping scraping.")
