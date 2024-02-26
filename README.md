@@ -14,14 +14,16 @@ Getting started is a breeze! Just follow these simple steps:
 
 1. Download the Python files provided.
 2. Install the required packages by running the following commands in your terminal or command prompt:
+   
    ```bash
    pip install beautifulsoup4 requests
    ```
+   
    For ArchLinux user : 
    ```bash
    sudo pacman -Syu python-beautifulsoup4
    ```
-3. Place the files in the `plugins` folder of your IDA installation.
+4. Place the files in the `plugins` folder of your IDA installation.
 
 Now, you're all set to unveil the secrets behind those perplexing assembly instructions!
 
