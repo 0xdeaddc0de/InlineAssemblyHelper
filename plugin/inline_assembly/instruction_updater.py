@@ -7,29 +7,9 @@ from bs4 import BeautifulSoup
 from ida_kernwin import get_kernel_version
 
 def retrieve_IDA_path():
-    ida_version = get_kernel_version()
-    os_name = platform.system()
 
-    if os_name == "Linux":
-        ida_dir = Path.home() / f"idapro-{ida_version}"
-        directory_path = ida_dir / "plugins" / "inline_assembly"
-        
-        if directory_path.is_dir():
-            return os.path.join(directory_path,"instruction.py")
-        print("[InlineAssembly] Can't find path")
-        return None
-    if os_name == "Windows":
-        idar_dir = f"C:\Program File\IDA Pro {ida_version}"
-        directory_path = ida_dir / "plugins" / "inline_assembly"
-
-        if directory_path.is_dir():
-            return os.path.join(directory_path,"instruction.py")
-        else:
-            print("[InlineAssembly] Can't find path for Windows")
-            return None
-    else:   
-        print("[InlineAssembly] Unsupported operating system")
-        return None
+    ida_path : str = get_user_idadir().replace(".","") + "-" + get_kernel_version() 
+    return os.path.join(ida_path, "plugins","inline_assembly")
     
 
 def scrape_instructions(url="https://www.felixcloutier.com/x86/"):
