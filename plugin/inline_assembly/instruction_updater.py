@@ -9,7 +9,7 @@ from ida_kernwin import get_kernel_version
 def retrieve_IDA_path():
 
     ida_path : str = get_user_idadir().replace(".","") + "-" + get_kernel_version() 
-    return os.path.join(ida_path, "plugins","inline_assembly")
+    return os.path.join(ida_path, "plugins","inline_assembly","instruction.py")
     
 
 def scrape_instructions(url="https://www.felixcloutier.com/x86/"):
