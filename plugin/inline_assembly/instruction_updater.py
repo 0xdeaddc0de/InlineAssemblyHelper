@@ -8,14 +8,9 @@ from ida_kernwin import get_kernel_version
 from idaapi import get_user_idadir
 
 def retrieve_IDA_path():
-    os_name = platform.system()
-    if os_name == "Linux:
-        ida_path : str = get_user_idadir().replace(".","") + "-" + get_kernel_version() 
-        return os.path.join(ida_path, "plugins","inline_assembly","instruction.py")
-    else os_name == "Windows":
-        ida_path : str = get_user_idadir()
-        return os.path.join(ida_path, "plugins","inline_assembly","instruction.py")
-
+    
+    ida_path : str = get_user_idadir().replace(".","") + "-" + get_kernel_version() 
+    return os.path.join(ida_path, "plugins","inline_assembly","instruction.py")
     
 
 def scrape_instructions(url="https://www.felixcloutier.com/x86/"):
